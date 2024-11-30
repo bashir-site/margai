@@ -11,20 +11,49 @@ window.addEventListener('click', function (event) {
     menu.classList.remove('open');
   }
 });
-document.querySelectorAll('.section-7 > :last-child a').forEach((item) => {
-  document.querySelector('.section-7 > :last-child a').classList.add('bg-fone');
-  item.addEventListener('click', () => {
-    document.querySelectorAll('.section-7 > :last-child a').forEach((item) => {
-      item.classList.remove('bg-fone');
+const sections = document.querySelectorAll('.section-7-card');
+const dots = document.querySelectorAll('.section-7 > :last-child a');
+const container = document.querySelector('.section-7-card-content');
+
+function updateActiveDot() {
+  const scrollPosition = container.scrollLeft;
+  let activeIndex = 0;
+
+  // Har bir elementni tekshirib chiqing
+  sections.forEach((section, index) => {
+    if (
+      section.offsetLeft <= scrollPosition + container.offsetWidth / 2 &&
+      section.offsetLeft + section.offsetWidth >
+        scrollPosition + container.offsetWidth / 2
+    ) {
+      activeIndex = index;
+    }
+  });
+
+  // Barcha nuqtalarni tozalash
+  dots.forEach((dot) => dot.classList.remove('bg-fone'));
+
+  // To'g'ri nuqtani faollashtirish
+  dots[activeIndex].classList.add('bg-fone');
+}
+
+// Skroll voqeasi bilan nuqtalarni yangilash
+container.addEventListener('scroll', updateActiveDot);
+
+// Nuqtalarni bosganingizda skrollni moslashtirish
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', (e) => {
+    e.preventDefault();
+    container.scrollTo({
+      left: sections[index].offsetLeft,
+      behavior: 'smooth',
     });
-    item.classList.add('bg-fone');
+    updateActiveDot(); // Nuqtani yangilash
   });
 });
-document.querySelectorAll('.hamburger-div ul a').forEach((item) =>
-  item.addEventListener('click', () => {
-    document.getElementById('hamburgerMenu').classList.remove('open');
-  })
-);
+
+// Dastlabki nuqtani yangilash
+updateActiveDot();
 
 // ///////////////////
 document.querySelectorAll('.element2')[0].addEventListener('click', () => {
@@ -130,14 +159,14 @@ document.querySelectorAll('.element2')[3].addEventListener('click', () => {
   }
 });
 
-window.addEventListener("scroll", function() {
-  const header = document.querySelector("header");
-  const section1 = document.querySelector(".section-2");
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
+  const section1 = document.querySelector('.section-2');
   const section1Top = section1.getBoundingClientRect().top;
 
   if (section1Top <= 0) {
-    header.classList.add("fixed-header");
+    header.classList.add('fixed-header');
   } else {
-    header.classList.remove("fixed-header");
+    header.classList.remove('fixed-header');
   }
 });
