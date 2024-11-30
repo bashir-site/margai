@@ -4,14 +4,25 @@
   box-sizing: border-box;
   font-family: 'Muller', sans-serif;
   color: white;
+  scroll-behavior: smooth;
 }
-
+body,
+h1,
+h2,
+h3,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+html {
+  overflow-x: hidden;
+}
 body {
   background-color: #050505;
   font-family: 'Arial', sans-serif;
   overflow-x: hidden;
 }
-
 header {
   width: 100vw;
   height: 90px;
@@ -21,7 +32,19 @@ header {
   border-bottom: 1px solid #ffffff;
   padding-left: 5%;
   padding-right: 10%;
+  position: relative; /* Normal holatda relative bo'ladi */
+  transition: top 0.3s; 
+  background-color: black;
 }
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000; /* Ekranda yuqori qavatda bo'lishi uchun */
+}
+
 
 .navbar {
   display: flex;
@@ -35,8 +58,8 @@ header {
 }
 
 .logo-img {
-  height: 82px;
-  width: 83.48px;
+  height: 60px;
+  width: 60px;
 }
 
 .hamburger-btn {
@@ -96,7 +119,8 @@ header {
   align-items: center;
 }
 
-.hamburger-div ul li {
+.hamburger-div ul a {
+  text-decoration: none;
   color: white;
   font-weight: bold;
   font-size: 1.5rem;
@@ -236,36 +260,34 @@ header {
   width: 100%;
 }
 .content-2-text {
-  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto;
+}
+.content-2-text > div {
+  width: 90%;
   margin: auto auto;
-}
-.content-2-text > :first-child {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.content-2-text > :first-child > :first-child {
-  font-size: 1.6rem;
-  text-shadow: 0 0 7px #fff;
-}
-.content-2-text > :nth-child(2) {
-  color: #c1bfbf;
-  margin: 1rem 0 3rem 0;
-  line-height: 1.2;
-}
-.content-2-text > :last-child div {
-  display: flex;
-  justify-content: space-between;
   border-bottom: 1px solid #c1bfbf;
-  color: #c1bfbf;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  font-size: 1.3rem;
+  padding-bottom: 0.1rem;
 }
-.content-2-text > :last-child div > :last-child {
-  font-size: 1.5rem;
-}
+.content-2-text > div > div {
+  justify-content: space-between;
+  align-items: center;
 
+  display: flex;
+}
+.content-2-text > div > div p {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.hide-element {
+  display: none;
+}
+.show-element {
+  display: block;
+}
 /* Section 6 */
 .section-6 {
   width: 100vw;
@@ -308,6 +330,7 @@ header {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  cursor: pointer;
 }
 .section-6-content div > :last-child > div img {
   height: 10rem;
@@ -376,8 +399,8 @@ header {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  width: 50rem;
-  margin: 2rem auto;
+  min-width: 50rem;
+  margin: 2rem auto 1rem auto;
 
   padding: 0.7rem 1.2rem;
 }
@@ -399,11 +422,10 @@ header {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  margin-top: 2rem;
 }
-.section-7 > :last-child > :first-child {
-  background-color: white;
-}
-.section-7 > :last-child div {
+
+.section-7 > :last-child a {
   height: 0.7rem;
   width: 0.7rem;
   border: 1px solid #fff;
@@ -455,6 +477,7 @@ header {
   border: none;
   height: 15rem;
   border-radius: 12px;
+  text-align: center;
   margin-top: 2rem;
   position: relative;
 }
@@ -515,6 +538,7 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
+  cursor: pointer;
 }
 
 footer {
@@ -522,15 +546,32 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 25rem;
-  padding: 2rem 0;
+  margin-top: 26rem;
+  padding: 1rem 0;
+gap: -1rem;
 }
-footer>:first-child {
+footer > :first-child {
   height: 4rem;
   width: 4rem;
 }
 
-footer p {
+footer h1 {
+  text-align: center;
+  
   font-family: 'Kusanagi', sans-serif;
   font-size: 2rem;
+
+}
+.section-7-card-content {
+  display: flex;
+  overflow-x: scroll;
+  width: 50rem;
+  margin: 0 auto;
+  gap: 1.5rem;
+}
+.bg-fone {
+  background-color: white;
+}
+::-webkit-scrollbar {
+  display: none;
 }

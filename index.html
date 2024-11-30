@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Магомед Гайтукиев - юрист 24/7</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/responsive.css" />
     <link
@@ -22,19 +27,14 @@
   <body>
     <div>
       <header data-aos="slide-down">
-        <img
-       
-          class="logo-img"
-          src="./images/logo.png"
-          alt="Logo"
-        />
+        <img class="logo-img" src="./images/logo.png" alt="Logo" />
         <nav class="navbar">
-          <a href="#">Главная</a>
-          <a href="#">Про нас</a>
-          <a href="#">Почему мы</a>
-          <a href="#">Юристы</a>
-          <a href="#">Отзывы</a>
-          <a href="#">Связь</a>
+          <a href="#sct1">Главная</a>
+          <a href="#sct2">Про нас</a>
+          <a href="#sct5">Почему мы</a>
+          <a href="#sct4">Юристы</a>
+          <a href="#sct7">Отзывы</a>
+          <a href="#sct8">Связь</a>
         </nav>
         <img
           class="hamburger-btn"
@@ -45,12 +45,12 @@
       </header>
       <div class="hamburger-div" id="hamburgerMenu">
         <ul>
-          <li>Главная</li>
-          <li>Про нас</li>
-          <li>Почему мы</li>
-          <li>Юристы</li>
-          <li>Отзывы</li>
-          <li>Связь</li>
+          <a href="#sct1">Главная</a>
+          <a href="#sct2">Про нас</a>
+          <a href="#sct5">Почему мы</a>
+          <a href="#sct4">Юристы</a>
+          <a href="#sct7">Отзывы</a>
+          <a href="#sct8">Связь</a>
         </ul>
         <img
           class="close-btn"
@@ -61,16 +61,18 @@
       </div>
     </div>
     <!-- Section 1 -->
-    <section class="section-1" data-aos="slide-right">
-      <img  src="./images/image1.png" alt="Image 1" />
+    <section id="sct1" class="section-1" data-aos="fade-right">
+      <img src="./images/image1.png" alt="Image 1" />
       <div class="section-1-content">
         <h1>MARGAI</h1>
         <p>Юристы с опытом более 10-ти лет помогут Вам в любой ситуации</p>
-        <p>FREE CONSULTATION</p>
+        <p data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+          FREE CONSULTATION
+        </p>
       </div>
     </section>
     <!-- Section 2 -->
-    <section class="section-2" data-aos="slide-left">
+    <section id="sct2" class="section-2" data-aos="fade-left">
       <div class="content">
         <h1>Кто мы?</h1>
         <p>
@@ -116,9 +118,10 @@
         </p>
       </div>
     </section>
-    <section class="section-4" data-aos="fade-up">
+    <!-- Section 4 -->
+    <section id="sct4" class="section-4" data-aos="fade-up">
       <img src="./images/image6.png" alt="" />
-      <div class="section-4-text" >
+      <div class="section-4-text">
         <p>Бесплатная консультация</p>
         <p>
           Чем быстрее Вы обратитесь к нам, тем быстрее мы решим любую задачу
@@ -126,10 +129,11 @@
         <p>Заполнить заявку</p>
       </div>
     </section>
-    <section class="section-5">
-      <img  src="./images/bg-image.png" alt="" />
+    <!-- section 5 -->
+    <section id="sct5" class="section-5">
+      <img src="./images/bg-image.png" alt="" />
       <div class="section-5-text">
-        <div class="content-text-title"  data-aos="fade-down">
+        <div class="content-text-title" data-aos="fade-down">
           <h1>Почему мы?</h1>
           <p>
             Внезависимости от того, в какой сфере Вам необходима помощь - мы
@@ -137,33 +141,64 @@
           </p>
         </div>
         <div class="content-2">
-          <img data-aos="slide-right" src="./images/image7.png" alt="" />
-          <div data-aos="slide-left" class="content-2-text">
+          <img data-aos="fade-right" src="./images/image7.png" alt="" />
+
+          <div class="content-2-text">
             <div>
-              <p>Коммерческая защита</p>
-              <p>—</p>
+              <div>
+                <p>Коммерческая защита</p>
+                <p class="element2">-</p>
+              </div>
+              <p class="show-element element">
+                Мы обеспечим защиту ваших коммерческих интересов. Независимо от
+                того, нужна ли вам поддержка при заключении контрактов,
+                урегулирование споров с партнерами или помощь в защите
+                интеллектуальной собственности, наши юристы помогут защитить ваш
+                бизнес от юридических рисков и обеспечить соблюдение всех
+                обязательств по закону.
+              </p>
             </div>
-            <p>
-              Мы обеспечим защиту ваших коммерческих интересов. Независимо от
-              того, нужна ли вам поддержка при заключении контрактов,
-              урегулирование споров с партнерами или помощь в защите
-              интеллектуальной собственности, наши юристы помогут защитить ваш
-              бизнес от юридических рисков и обеспечить соблюдение всех
-              обязательств по закону.
-            </p>
             <div>
               <div>
                 <p>Семейная защита</p>
-                <p>+</p>
+                <p class="element2">+</p>
               </div>
+              <p class="hide-element element">
+                Мы обеспечим защиту ваших коммерческих интересов. Независимо от
+                того, нужна ли вам поддержка при заключении контрактов,
+                урегулирование споров с партнерами или помощь в защите
+                интеллектуальной собственности, наши юристы помогут защитить ваш
+                бизнес от юридических рисков и обеспечить соблюдение всех
+                обязательств по закону.
+              </p>
+            </div>
+            <div>
               <div>
                 <p>Трудовая защита</p>
-                <p>+</p>
+                <p class="element2">+</p>
               </div>
+              <p class="hide-element element">
+                Мы обеспечим защиту ваших коммерческих интересов. Независимо от
+                того, нужна ли вам поддержка при заключении контрактов,
+                урегулирование споров с партнерами или помощь в защите
+                интеллектуальной собственности, наши юристы помогут защитить ваш
+                бизнес от юридических рисков и обеспечить соблюдение всех
+                обязательств по закону.
+              </p>
+            </div>
+            <div>
               <div>
                 <p>Компенсация за причиненный ущерб</p>
-                <p>+</p>
+                <p class="element2">+</p>
               </div>
+              <p class="hide-element element">
+                Мы обеспечим защиту ваших коммерческих интересов. Независимо от
+                того, нужна ли вам поддержка при заключении контрактов,
+                урегулирование споров с партнерами или помощь в защите
+                интеллектуальной собственности, наши юристы помогут защитить ваш
+                бизнес от юридических рисков и обеспечить соблюдение всех
+                обязательств по закону.
+              </p>
             </div>
           </div>
         </div>
@@ -176,7 +211,11 @@
         <div>
           <p data-aos="fade-dow">Наши специалисты</p>
           <div>
-            <div data-aos="zoom-in">
+            <div
+              data-bs-target="#exampleModalToggle"
+              data-bs-toggle="modal"
+              data-aos="zoom-in"
+            >
               <img src="./images/image8.png" alt="" />
               <p>Михаил Гайтукиев</p>
               <p>Важная шишка</p>
@@ -184,14 +223,22 @@
               <p>Прочитать полную биографию</p>
             </div>
 
-            <div data-aos="zoom-in">
+            <div
+              data-bs-target="#exampleModalToggle"
+              data-bs-toggle="modal"
+              data-aos="zoom-in"
+            >
               <img src="./images/image9.png" alt="" />
               <p>Станислав Марков</p>
               <p>Тоже важная шишка</p>
               <p>Стаж тоже сколько-то там лет</p>
               <p>Прочитать полную биографию</p>
             </div>
-            <div data-aos="zoom-in">
+            <div
+              data-bs-target="#exampleModalToggle"
+              data-bs-toggle="modal"
+              data-aos="zoom-in"
+            >
               <img src="./images/image10.png" alt="" />
               <p>Сол Гудман</p>
               <p>Адвокат</p>
@@ -203,7 +250,7 @@
       </div>
     </section>
     <!-- Section 7 -->
-    <div class="section-7-8">
+    <div id="sct7" class="section-7-8">
       <img src="./images/bg-image-3.png" alt="Background image 3" />
       <div>
         <section class="section-7">
@@ -213,28 +260,72 @@
             Здесь Вы можете ознакомиться с отзывами тех людей, кто не упустил
             шанс и воспользовался услугами нашей организации
           </p>
-          <div data-aos="slide-right" class="section-7-card">
-            <img src="/images/image11.png" alt="" />
-            <div>
-              <p>
-                Невероятно удивлен профессионализму МАРГАЙ. Благодаря этим людям
-                я понял, что нельзя никому доверять в этой жизни. Особенно людям
-                с таким прекрасным и говорящим названием. Я и МАРГНУТЬ не успел,
-                как отдал 166 тысяч рублей, правда не понял за что. Рекомендую
-                для тех, кто хочет новых ощущений!
-              </p>
-              <p>Виктор</p>
-              <p>Сварщик III разряда</p>
+          <div class="section-7-card-content">
+            <div id="item1" data-aos="fade-right" class="section-7-card">
+              <img src="./images/image11.png" alt="" />
+              <div>
+                <p>
+                  Невероятно удивлен профессионализму МАРГАЙ. Благодаря этим
+                  людям я понял, что нельзя никому доверять в этой жизни.
+                  Особенно людям с таким прекрасным и говорящим названием. Я и
+                  МАРГНУТЬ не успел, как отдал 166 тысяч рублей, правда не понял
+                  за что. Рекомендую для тех, кто хочет новых ощущений!
+                </p>
+                <p>Виктор</p>
+                <p>Сварщик III разряда</p>
+              </div>
+            </div>
+            <div id="item2" data-aos="fade-right" class="section-7-card">
+              <img src="/images/image11.png" alt="" />
+              <div>
+                <p>
+                  Невероятно удивлен профессионализму МАРГАЙ. Благодаря этим
+                  людям я понял, что нельзя никому доверять в этой жизни.
+                  Особенно людям с таким прекрасным и говорящим названием. Я и
+                  МАРГНУТЬ не успел, как отдал 166 тысяч рублей, правда не понял
+                  за что. Рекомендую для тех, кто хочет новых ощущений!
+                </p>
+                <p>Виктор</p>
+                <p>Сварщик III разряда</p>
+              </div>
+            </div>
+            <div id="item3" data-aos="fade-right" class="section-7-card">
+              <img src="/images/image11.png" alt="" />
+              <div>
+                <p>
+                  Невероятно удивлен профессионализму МАРГАЙ. Благодаря этим
+                  людям я понял, что нельзя никому доверять в этой жизни.
+                  Особенно людям с таким прекрасным и говорящим названием. Я и
+                  МАРГНУТЬ не успел, как отдал 166 тысяч рублей, правда не понял
+                  за что. Рекомендую для тех, кто хочет новых ощущений!
+                </p>
+                <p>Виктор</p>
+                <p>Сварщик III разряда</p>
+              </div>
+            </div>
+            <div id="item4" data-aos="fade-right" class="section-7-card">
+              <img src="/images/image11.png" alt="" />
+              <div>
+                <p>
+                  Невероятно удивлен профессионализму МАРГАЙ. Благодаря этим
+                  людям я понял, что нельзя никому доверять в этой жизни.
+                  Особенно людям с таким прекрасным и говорящим названием. Я и
+                  МАРГНУТЬ не успел, как отдал 166 тысяч рублей, правда не понял
+                  за что. Рекомендую для тех, кто хочет новых ощущений!
+                </p>
+                <p>Виктор</p>
+                <p>Сварщик III разряда</p>
+              </div>
             </div>
           </div>
           <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <a href="#item1"></a>
+            <a href="#item2"></a>
+            <a href="#item3"></a>
+            <a href="#item4"></a>
           </div>
         </section>
-        <section class="section-8">
+        <section id="sct8" class="section-8">
           <div class="line"></div>
           <h1 data-aos="fade">Помощь в миг</h1>
           <p data-aos="fade">
@@ -243,7 +334,7 @@
           </p>
 
           <div class="section-8-content">
-            <form data-aos="slide-right">
+            <form data-aos="fade-right">
               <div>
                 <div>
                   <p>Имя</p>
@@ -261,7 +352,7 @@
               <br />
               <button class="submit">Отправить</button>
             </form>
-            <div data-aos="slide-left">
+            <div data-aos="fade-left">
               <div>
                 <p>Наш e-mail:</p>
                 <p>lawyer@margay.com</p>
@@ -280,16 +371,52 @@
         </section>
       </div>
     </div>
-    <footer >
+    <footer>
       <img src="./images/telegram-icon.png" alt="" />
-      <img src="./images/telegram-name.png" alt="" />
+<h1>KTOSPROSIL</h1>
     </footer>
-    <script src="./js/hamburger.js"></script>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModalToggle"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1
+              style="color: black"
+              class="modal-title fs-5"
+              id="exampleModalToggleLabel"
+            >
+              Modal
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" style="color: black">
+            Как вы сказали, это модальное окно. Вы можете изменить его по своему
+            усмотрению из кода.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ///// -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/handleButton.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init({
         duration: 1500,
+        offset: 1,
       });
     </script>
   </body>

@@ -31,8 +31,8 @@
     padding: 0;
   }
   .logo-img {
-    height: 75px;
-    width: 76px;
+    height: 50px;
+    width: 50px;
   }
   header {
     height: 82px;
@@ -173,6 +173,9 @@
     width: 8rem;
   }
   .section-7-card {
+    min-width: 40rem;
+  }
+  .section-7-card-content{
     width: 40rem;
   }
 }
@@ -259,6 +262,9 @@
 @media (max-width: 650px) {
   .section-7-card {
     flex-direction: column;
+    min-width: 18rem;
+  }
+  .section-7-card-content{
     width: 18rem;
   }
   footer {
@@ -303,7 +309,7 @@
     margin-bottom: 7rem;
   }
   footer {
-    margin-top: 65rem;
+    margin-top: 66rem;
     padding: .5rem;
   }
 }
